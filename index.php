@@ -5,7 +5,7 @@ session_start();
 // CONFIGURATION - Change these as needed
 // ============================================
 $ADMIN_TOKEN = "MySecretToken2026!"; // Must match your Railway environment variable
-$POW_SERVER_URL = "https://rateme-production-7bc1.up.railway.app"; // Your Railway app URL
+$POW_SERVER_URL = "https://pow-production-9e6e.up.railway.app"; // Your Railway app URL
 $REDIRECT_URL = "/target-page.php"; // Where to redirect after successful verification
 // ============================================
 
