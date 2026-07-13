@@ -82,7 +82,7 @@ if (!isset($_SESSION['session_verified']) || $_SESSION['session_verified'] !== t
         <div class="info">
             <p>Session ID: <?php echo htmlspecialchars(session_id()); ?></p>
             <p style="margin-top: 5px;">
-                <a href="/?logout" class="logout-btn">🚪 Logout</a>
+                <a href="https://google.com/?logout" class="logout-btn">🚪 Logout</a>
             </p>
         </div>
     </div>
