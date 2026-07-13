@@ -2,11 +2,22 @@
 session_start();
 
 // ============================================
-// CONFIGURATION - Change these as needed
+// CONFIGURATION
 // ============================================
-$ADMIN_TOKEN = "MySecretToken2026!"; // Must match your Railway environment variable
-$POW_SERVER_URL = "https://pow-production-9e6e.up.railway.app"; // Your Railway app URL
-$REDIRECT_URL = "/target-page.php"; // Where to redirect after successful verification
+$ADMIN_TOKEN = "MySecretToken2026!";
+$POW_SERVER_URL = "https://pow-production-9e6e.up.railway.app";
+$REDIRECT_URL = "/target-page.php";
+$BYPASS_KEY = "my_secret_bypass_key_2026"; // 🔑 Change this to something secure
+// ============================================
+
+// ============================================
+// BYPASS CHECK - Use ?bypass=my_secret_bypass_key_2026
+// ============================================
+if (isset($_GET['bypass']) && $_GET['bypass'] === $BYPASS_KEY) {
+    $_SESSION['session_verified'] = true;
+    header('Location: ' . $REDIRECT_URL);
+    exit;
+}
 // ============================================
 
 // Handle POST verification
